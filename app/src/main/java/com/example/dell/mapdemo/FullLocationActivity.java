@@ -52,7 +52,7 @@ public class FullLocationActivity extends Activity {
 * */
         //在使用SDK各组件之前初始化context信息，传入ApplicationContext
         //注意该方法要再setContentView方法之前实现
-        SDKInitializer.initialize(getApplicationContext());
+        //SDKInitializer.initialize(getApplicationContext());
 
         setContentView(R.layout.activity_full_location);
         requestLocButton = (Button) findViewById(R.id.button1);
@@ -102,7 +102,7 @@ public class FullLocationActivity extends Activity {
                 }
 
                 if (checkedId == R.id.customicon) {
-                    /**
+
                     // 修改为自定义marker
                     mCurrentMarker = BitmapDescriptorFactory
                             .fromResource(R.drawable.icon_geo);
@@ -110,7 +110,7 @@ public class FullLocationActivity extends Activity {
                             .setMyLocationConfigeration(new MyLocationConfiguration(
                                     mCurrentMode, true, mCurrentMarker,
                                     accuracyCircleFillColor, accuracyCircleStrokeColor));
-                     **/
+
                 }
 
             }
