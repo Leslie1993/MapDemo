@@ -50,9 +50,9 @@ public class FullLocationActivity extends Activity {
 /*
 * 测试是否是缺少initialize方法
 * */
-        //在使用SDK各组件之前初始化context信息，传入ApplicationContext
-        //注意该方法要再setContentView方法之前实现
-        //SDKInitializer.initialize(getApplicationContext());
+//        在使用SDK各组件之前初始化context信息，传入ApplicationContext
+//        注意该方法要再setContentView方法之前实现
+        SDKInitializer.initialize(getApplicationContext());
 
         setContentView(R.layout.activity_full_location);
         requestLocButton = (Button) findViewById(R.id.button1);
@@ -105,7 +105,7 @@ public class FullLocationActivity extends Activity {
 
                     // 修改为自定义marker
                     mCurrentMarker = BitmapDescriptorFactory
-                            .fromResource(R.drawable.icon_geo);
+                            .fromResource(R.drawable.icon_car);
                     mBaiduMap
                             .setMyLocationConfigeration(new MyLocationConfiguration(
                                     mCurrentMode, true, mCurrentMarker,
